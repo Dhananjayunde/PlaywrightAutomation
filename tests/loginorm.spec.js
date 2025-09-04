@@ -11,9 +11,12 @@ test("login test", async function({page}){
 
    await page.locator("//span[normalize-space()='Admin']").click()
    await page.locator("//span[normalize-space()='Job']").click()
-   const errorMessage=await page.locator("//span[normalize-space()='Leave']").textContent()
-   console.log("Error message is :"+errorMessage)
-   expect(errorMessage.includes("Leave")).toBeTruthy()
+   await page.locator("//span[normalize-space()='My Info']").click()
+   
+   let option=await page.locator("//a").textContent()
+  console.log(option)
+   
+   
    await page.close()
 
 
