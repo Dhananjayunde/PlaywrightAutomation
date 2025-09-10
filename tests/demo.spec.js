@@ -1,5 +1,6 @@
 const{test, expect}=require('@playwright/test')
 
+test.describe("first test",()=>{
 test("my first test", async function ({page}){
         console.log('first test')
 } )
@@ -9,6 +10,7 @@ test("my second", async function ({page}){
 test.only("my third", async function ({page}){
         expect(12).toBe(12)
 } )
-test.skip("my fourth", async function ({page}){
+test("my fourth", {tag:"@first"},async function ({page}){
         
+} )
 } )

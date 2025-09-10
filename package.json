@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:chromium":"npx playwright test --project chromium",
-    "test:first":"npx playwright test --grep@first",
-    "test:report":"npx playwright test && npx playwright show-report"
+    "test:chromium": "npx playwright test --project chromium",
+    "test:first": "npx playwright test --grep@first",
+    "test:report": "npx playwright test && npx playwright show-report",
+    "test-ui": "npx playwright test --ui"
   },
   "keywords": [],
   "author": "",

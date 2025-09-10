@@ -13,9 +13,8 @@ test("login test", async function({page}){
    await page.locator("//span[normalize-space()='Job']").click()
    await page.locator("//span[normalize-space()='My Info']").click()
    
-   let option=await page.locator("//a").textContent()
-  console.log(option)
-   
+    await expect(page).toHaveScreenshot("image.png");
+
    
    await page.close()
 

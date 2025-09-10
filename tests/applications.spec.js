@@ -8,4 +8,6 @@ test("application test",async function ({page}) {
     console.log("expected title should be google"+title)
 
     await expect(page).toHaveTitle("Google")
-})
+    await expect(page).toHaveScreenshot("image.png");
+
+});
